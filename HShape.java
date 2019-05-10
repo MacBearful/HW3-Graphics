@@ -4,12 +4,10 @@ public class HShape extends AbstractShape {
     // squareMatrix[][] contains the row and column location for a 9 by 9 grid
     private Point[][] squareMatrix = new Point[3][3];
     // size = length of the side of a grid square
-    private int size;
 
     // HShape constructor. (int x, int y) is the location of the very top left coordinate of the HShape.
     public HShape(int x, int y, Color c, int size){
-        super(x,y,c);
-    	this.size = size;
+        super(x,y,c,size);
     }
 
     public void draw(Graphics g) {

@@ -5,25 +5,26 @@ public class FibonacciSquare extends AbstractShape {
     segment of the circle depending on which quadrant it is in.
      */
     private int quadrant;
-    // n = length of the side of the square containing the arc
+    // the Fibonacci index
     private int n;
 
     // FibonacciSquare constructor. (int x, int y) is the location of the very top left coordinate of the square.
     public FibonacciSquare(int x, int y, Color c, int quadrant, int n){
-        super(x,y,c);
+        super(x,y,c,fibCalculation(n));
         this.quadrant = quadrant;
         this.n = n;
     }
     
-    public int fibCalculation(int num) {
+    public static int fibCalculation(int num) {
     	if(num == 1 || num == 2) {
     		return 1;
     	}
     	return fibCalculation(num-1) + fibCalculation(num -2);
     }
+
     
     public void draw(Graphics g) {
-    	int size = fibCalculation(n);
+    	//int size = fibCalculation(n);
         g.setColor(c);
         g.drawRect(x, y, size, size);
         switch (quadrant) {
