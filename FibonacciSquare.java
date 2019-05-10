@@ -1,9 +1,6 @@
 import java.awt.*;
 
 public class FibonacciSquare extends AbstractShape {
-    private int x;
-    private int y;
-    private Color c;
     /* The quadrant refers to the orientation of the arc, which is always a quarter circle and will be a different
     segment of the circle depending on which quadrant it is in.
      */
@@ -13,29 +10,39 @@ public class FibonacciSquare extends AbstractShape {
 
     // FibonacciSquare constructor. (int x, int y) is the location of the very top left coordinate of the square.
     public FibonacciSquare(int x, int y, Color c, int quadrant, int n){
-        this.x = x;
-        this.y = y;
-        this.c = c;
+        super(x,y,c);
         this.quadrant = quadrant;
         this.n = n;
     }
-
-    @Override
+    
+    public int fibCalculation(int num) {
+    	if(num == 1 || num == 2) {
+    		return 1;
+    	}
+    	return fibCalculation(num-1) + fibCalculation(num -2);
+    }
+    
     public void draw(Graphics g) {
+    	int size = fibCalculation(n);
         g.setColor(c);
-        g.drawRect(x, y, n, n);
+        g.drawRect(x, y, size, size);
         switch (quadrant) {
             case 1:
-                g.drawArc(x - n, y, n * 2, n * 2, 0, 90);
+                g.drawArc(x - size, y, size * 2, size * 2, 0, 90);
                 break;
             case 2:
-                g.drawArc(x, y, n * 2, n * 2, 90, 90);
+                g.drawArc(x, y, size * 2, size * 2, 90, 90);
                 break;
             case 3:
-                g.drawArc(x, y - n, n * 2, n * 2, 180, 90);
+                g.drawArc(x, y - size, size * 2, size * 2, 180, 90);
                 break;
             case 4:
-                g.drawArc(x - n, y - n, n * 2, n * 2, 270, 90);
+                g.drawArc(x - size, y - size, size * 2, size * 2, 270, 90);
         }
+    }
+    
+    public Shape deepCopy() {
+    	FibonacciSquare copy = new FibonacciSquare(x,y,c,quadrant,n);
+    	return copy;
     }
 }

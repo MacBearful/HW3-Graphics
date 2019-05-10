@@ -19,22 +19,22 @@ public class MainClass {
         DrawingModel model = new DrawingModel();
 
         // create and add HShapes to the model
-        Shape h1 = new HShape(150, 150, Color.RED, 50);
+        Shape h1 = new HShape(150, 150, Color.RED, 175);
         model.addShape(h1);
-        Shape h2 = new HShape(250, 350, Color.GREEN, 30);
+        Shape h2 = new HShape(250, 350, Color.GREEN, 75);
         model.addShape(h2);
-        Shape h3 = new HShape(350, 180, Color.BLUE, 70);
+        Shape h3 = new HShape(350, 180, Color.BLUE, 100);
         model.addShape(h3);
-        Shape h4 = new HShape(20, 165, Color.BLACK, 40);
+        Shape h4 = new HShape(20, 165, Color.BLACK, 65);
         model.addShape(h4);
         // create and add FibonacciSquares to the model
-        Shape f1 = new FibonacciSquare(40,40, Color.BLACK, 1, 80);
+        Shape f1 = new FibonacciSquare(40,40, Color.BLACK, 1, 11);
         model.addShape(f1);
-        Shape f2 = new FibonacciSquare(400,40, Color.RED, 2, 120);
+        Shape f2 = new FibonacciSquare(400,40, Color.RED, 2, 9);
         model.addShape(f2);
-        Shape f3 = new FibonacciSquare(350,400, Color.DARK_GRAY, 3, 50);
+        Shape f3 = new FibonacciSquare(350,400, Color.DARK_GRAY, 3, 10);
         model.addShape(f3);
-        Shape f4 = new FibonacciSquare(40,360, Color.GREEN, 4, 200);
+        Shape f4 = new FibonacciSquare(40,360, Color.GREEN, 4, 12);
         model.addShape(f4);
 
         /*

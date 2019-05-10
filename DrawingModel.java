@@ -21,6 +21,10 @@ public class DrawingModel {
 	}
 
 	public List<Shape> getShapes() {
-		return shapes;
+		List<Shape> copiedList = new ArrayList<>();
+		for (Shape s: shapes) {
+			copiedList.add(s.deepCopy());
+		}
+		return copiedList;
 	}
 }
