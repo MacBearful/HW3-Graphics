@@ -21,7 +21,7 @@ public class HShape extends AbstractShape {
     @Override
     public void draw(Graphics g) {
         g.setColor(c);
-        // create square objects at each correct grid location in order to build an HShape
+        // fillRect() at each correct grid location in order to build an HShape
         g.fillRect((int)squareMatrix[0][0].getX(),(int)squareMatrix[0][0].getY(),size,size);
         g.fillRect((int)squareMatrix[2][0].getX(),(int)squareMatrix[2][0].getY(),size,size);
         g.fillRect((int)squareMatrix[0][1].getX(),(int)squareMatrix[0][1].getY(),size,size);
