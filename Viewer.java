@@ -2,7 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 
 public class Viewer extends JPanel implements View {
-	// The model the Viewer is registered with
+	// the model the Viewer is registered with
 	private DrawingModel model;
 
 	public Viewer() {
