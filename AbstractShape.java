@@ -1,2 +1,2 @@
-public abstract class AbstractShape implements ShapeInterface {
+public abstract class AbstractShape implements Shape {
 }

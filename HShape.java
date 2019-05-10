@@ -3,13 +3,11 @@ import java.awt.*;
 public class HShape extends AbstractShape {
     // squareMatrix[][] contains the row and column location for a 9 by 9 grid
     private Point[][] squareMatrix = new Point[3][3];
-
-    // length of the side of a grid square
+    // size = length of the side of a grid square
     private int size;
-
     private Color c;
 
-    // HShape constructor. (int x, int y) is the location of the very top left coordinate of the HShape
+    // HShape constructor. (int x, int y) is the location of the very top left coordinate of the HShape.
     public HShape(int x, int y, Color c, int size){
         this.size = size;
         this.c = c;
